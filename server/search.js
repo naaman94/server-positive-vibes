@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const mongo = require("../DB/home");
+const mongo = require("../DB/search");
 
 //write your code here
 

@@ -5,7 +5,7 @@ let Tips = db.Tips
 
 let readData = (category, cb) => {
     // console.log('sData in mongo', sData)
-    Tips.find(category).sort({ dateOfPublish: -1 }).exec((err, data) => {
+    Tips.find({ 'category': { $in: category } }).sort({ dateOfPublish: -1 }).exec((err, data) => {
         if (err) {
             cb(err)
         } else {

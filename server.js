@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/addTips", require("./server/addTips"));
-app.use("/home", require("./server/home"));
+app.use("/search", require("./server/search"));
 
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => console.log(`Server listening to ${PORT}`)); 
